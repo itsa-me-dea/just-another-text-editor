@@ -24,7 +24,32 @@ warmStrategyCache({
   strategy: pageCache,
 });
 
+offlineFallback();
+
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// TODO: Implement asset caching
-registerRoute();
+// Implement asset caching
+registerRoute(
+  ({ request }) => {
+    console.log(request);
+    return (
+      // CSS
+      request.destination === 'style' ||
+      // JavaScript
+      request.destination === 'script' ||
+      // Images
+      request.destination === 'image'
+    );
+  },
+  new StaleWhileRevalidate({
+    cacheName: 'assets-cache',
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+      new ExpirationPlugin({
+        maxAgeSeconds: 30 * 24 * 60 * 60,
+      }),
+    ],
+  })
+);

@@ -39,6 +39,8 @@ registerRoute(
       request.destination === 'script' ||
       // HTML
       request.destination === 'document' ||
+      // Image
+      request.destination === 'image' ||
       // Worker
       request.destination === 'worker'
     );

@@ -7,9 +7,9 @@
 
 ## Description
 
-<!-- My motivation was to build the back end for an social media site that creates and holds a database for `Users` and posts (aka `Thoughts`). There is meant to be interactability between users in forms of `friends` and `reactions` to user posts.
+My motivation was to build a text editor that runs in the browser and utilizes Progressive Web Applications (PWAs) for data persistence, offline functionality and app installation.
 
-This creates a site that utilizes back-end features by configuring Express.js API to use Mongoose and interact with a NoSQL database. I learned a great deal on how work with json, Isomnia, NoSQL, and Mongoose. Additionally, I found these options to be better alternative to NoSQL and Sequalize. I learned to utilize CRUD methods, virtuals, getters and even got more familiar with using NPM. -->
+I learned a great deal on how work with PWAs, including jwebpack bundles, service workers and manifests.
 
 ## Installation
 
@@ -34,72 +34,57 @@ To review the webpage / application features, you can open up the DevTools (`Ctr
 <details>
   <summary>J.A.T.E. Working Images</summary>
     
-  The image below shows the Client-Server folder structure:  
+  The image below displays the Client-Server folder structure:  
 
   <img src="./Assets/my-work-pics/mywork_clientServerStructure.png" alt="Client Server Structure" style="display: block; width: auto; height: auto; margin-right: auto; margin-left: auto; margin-bottom: 15px;">
     
-    WHEN I run `npm run start` from the root directory
-    THEN I find that my application should start up the backend and serve the client
-    WHEN I run the text editor application from my terminal
-    THEN I find that my JavaScript files have been bundled using webpack
-    WHEN I run my webpack plugins
-    THEN I find that I have a generated HTML file, service worker, and a manifest file
-    
-   
-   hello 
-    
-    
-  The image below shows the text editor still functioning in the browser without errors:
+  The gif below displays the build and start-up of the application:
 
-   <img src="./Assets/my-work-pics/mywork_noError.png" alt="POST Users" style="display: block; width: auto; height: auto; margin-right: auto; margin-left: auto; margin-bottom: 15px;"> 
+  <img src="./Assets/my-work-pics/mywork_startUp.gif" alt="Client Server Structure" style="display: block; width: auto; height: auto; margin-right: auto; margin-left: auto; margin-bottom: 15px;"> 
+        
+  The image below displays the text editor still functioning in the browser without errors:
+
+  <img src="./Assets/my-work-pics/mywork_noError.png" alt="POST Users" style="display: block; width: auto; height: auto; margin-right: auto; margin-left: auto; margin-bottom: 15px;"> 
     
+  The gif below displays a working IndexedDB:
+
+  <img src="./Assets/my-work-pics/mywork_indexedDB.gif" alt="Client Server Structure" style="display: block; width: auto; height: auto; margin-right: auto; margin-left: auto; margin-bottom: 15px;"> 
     
-    WHEN I open the text editor
-    THEN I find that IndexedDB has immediately created a database storage
-    WHEN I enter content and subsequently click off of the DOM window
-    THEN I find that the content in the text editor has been saved with IndexedDB
-    WHEN I reopen the text editor after closing it
-    THEN I find that the content in the text editor has been retrieved from our IndexedDB
+  The gif below displays the app installation from the webpage:
+
+  <img src="./Assets/my-work-pics/mywork_install.gif" alt="Client Server Structure" style="display: block; width: auto; height: auto; margin-right: auto; margin-left: auto; margin-bottom: 15px;">
     
-   
-   hello 
+  The gif below displays the registered service worker and offline use:
+
+  <img src="./Assets/my-work-pics/mywork_offline.gif" alt="Client Server Structure" style="display: block; width: auto; height: auto; margin-right: auto; margin-left: auto; margin-bottom: 15px;">
     
-    
-    WHEN I click on the Install button
-    THEN I download my web application as an icon on my desktop
-    WHEN I load my web application
-    
-   
-   hello 
-    
-    
-    THEN I should have a registered service worker using workbox
-    WHEN I register a service worker
-    THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
     
    
 </details>
 
 ## Credits
 
-<!-- - Collaborators: 
+- Collaborators: 
   - N/A.
 - Third-party assets: 
-  - https://expressjs.com/
-  - https://day.js.org/
-  - https://mongoosejs.com/
-  - https://www.npmjs.com/package/mongoose-unique-validator
+  - https://www.npmjs.com/package/babel-loader
+  - https://www.npmjs.com/package/css-loader
+  - https://www.npmjs.com/package/html-webpack-plugin
+  - https://www.npmjs.com/package/style-loader
+  - https://webpack.js.org/
+  - https://www.npmjs.com/package/webpack-cli
+  - https://www.npmjs.com/package/webpack-dev-server
+  - https://www.npmjs.com/package/webpack-pwa-manifest
+  - https://www.npmjs.com/package/webpack-webpack-plugin
 - Tutorials: 
   - UCSD-VIRT-FSF-PT-03-2023-U-LOLC
-  - https://stackoverflow.com/questions/18022365/mongoose-validate-email-syntax
-  - https://stackoverflow.com/questions/67680295/node-js-mongoose-findone-id-req-params-id-doesnt-work
-  - https://stackoverflow.com/questions/69574924/express-custom-json-response
-  - https://stackoverflow.com/questions/23502367/getter-and-setter-methods-in-model-class
-  - https://stackoverflow.com/questions/54992810/update-many-in-mongoose
-  - https://chat.openai.com/share/d53b354a-e690-47fb-a59b-6f4e303ee204
-  - https://chanwingkeihaha.medium.com/do-you-know-the-unique-option-is-not-a-validator-in-mongoose-85267fb1a085
-  - https://stackoverflow.com/questions/33627238/mongoose-find-with-multiple-conditions
-  - https://masteringjs.io/tutorials/mongoose/updatemany -->
+  - https://webpack.js.org/concepts/#loaders
+  - https://webpack.js.org/concepts/manifest/
+  - https://blog.jakoblind.no/css-modules-webpack/
+  - https://developer.mozilla.org/en-US/docs/Web/API/Request/destination
+  - https://developer.chrome.com/docs/workbox/modules/workbox-recipes/
+  - https://jasonthai.me/blog/2019/08/06/enable-offline-support-to-websites-with-workbox/
+  - https://stackoverflow.com/questions/66529102/uncaught-in-promise-typeerror-failed-to-execute-cache-on-addall-request
 
 ## License
 
